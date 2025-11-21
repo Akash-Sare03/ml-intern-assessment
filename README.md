@@ -1,4 +1,4 @@
-#AI/ML Intern Assignment
+# AI/ML Intern Assignment
 
 Welcome to the AI/ML Intern assignment! This project is designed to test your core Python skills and your ability to design and build a clean and efficient system from scratch.
 
