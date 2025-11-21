@@ -35,9 +35,9 @@ self.counts["the"]["cat"]["sat"] = 5  # "the cat sat" appeared 5 times
 **Padding**:
 - I add special tokens to mark where sentences start and end:
 
-- "['<start>', '<start>']" at the beginning (we need 2 words to start predicting)
+- [<'start'>, <'start'>] at the beginning (we need 2 words to start predicting)
 
-- "['<end>']" at the end to know when to stop
+- [<'end'>] at the end to know when to stop
 
 **Unknown Words**:
 If the model encounters words it hasn't seen before during generation, it simply stops rather than guessing. For this project, this approach worked well enough.
@@ -45,7 +45,7 @@ If the model encounters words it hasn't seen before during generation, it simply
 ### How Text Generation Works :
 The generation process is like a word-by-word chain:
 
-- Start with: "['<start>', '<start>']"
+- Start with: [<'start'>, <'start'>]
 
 - Look at the last 2 words and see what words usually follow them
 
