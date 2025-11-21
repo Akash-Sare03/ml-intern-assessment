@@ -1,11 +1,11 @@
 # Evaluation
 
-# Trigram Model - My Design Choices
+## Trigram Model - My Design Choices
 
-## What I Built
+### What I Built
 I created a trigram language model from scratch that can read text, learn word patterns, and generate new sentences. It works with both small example texts and full books.
 
-## How I Store Word Patterns :
+### How I Store Word Patterns :
 
 I used nested dictionaries to remember how words follow each other:
 
@@ -23,7 +23,7 @@ self.counts["the"]["cat"]["sat"] = 5  # "the cat sat" appeared 5 times
 
 - I considered using tuples like ("the", "cat", "sat") but the nested dictionaries felt more intuitive for looking up patterns.
 
-## How I Clean and Prepare Text :
+### How I Clean and Prepare Text :
 **Cleaning**:
 
 - Make everything lowercase so "The" and "the" are treated the same
@@ -35,17 +35,17 @@ self.counts["the"]["cat"]["sat"] = 5  # "the cat sat" appeared 5 times
 **Padding**:
 - I add special tokens to mark where sentences start and end:
 
-['<start>', '<start>'] at the beginning (we need 2 words to start predicting)
+- "['<start>', '<start>']" at the beginning (we need 2 words to start predicting)
 
-['<end>'] at the end to know when to stop
+- "['<end>']" at the end to know when to stop
 
 **Unknown Words**:
 If the model encounters words it hasn't seen before during generation, it simply stops rather than guessing. For this project, this approach worked well enough.
 
-## How Text Generation Works :
+### How Text Generation Works :
 The generation process is like a word-by-word chain:
 
-- Start with: ['<start>', '<start>']
+- Start with: "['<start>', '<start>']"
 
 - Look at the last 2 words and see what words usually follow them
 
@@ -61,9 +61,9 @@ The generation process is like a word-by-word chain:
 
 - Each run produces different results
 
-## Other Decisions I Made :
+### Other Decisions I Made :
 
-### Added Book Download Feature :
+#### Added Book Download Feature :
 
 - I added an optional download_book.py file that can download "Alice in Wonderland" from Project Gutenberg.
 
@@ -100,7 +100,7 @@ The generation process is like a word-by-word chain:
 - Gives clear messages about what's happening
 
 
-## What Works Well
+### What Works Well
 - The model learns patterns accurately.
 
 - With small texts, it generates sensible sentences using the vocabulary it learned

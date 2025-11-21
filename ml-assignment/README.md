@@ -6,7 +6,7 @@ This is my implementation of a trigram language model built from scratch. The mo
 
 ### Quick Start :
 
-**(Using Example Text(Example_corpus.txt file))**
+**(Using Example Text(example_corpus.txt file))**
 
 ```bash
 # Run the model with the included example text
